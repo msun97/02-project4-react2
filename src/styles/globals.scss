@@ -12,6 +12,35 @@ body{
   letter-spacing: -2%;
 }
 
+  .primary{
+    background-color: vars.$primary;
+    color:white;
+  }
+  .gray{
+    background-color: vars.$gray40;
+  }
+
+
+#wrap{
+  padding-left: 30px;
+  padding-right: 30px;
+  .title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    // 애니메이션 적용
+    &-sub{
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+    &-main{
+      font-size: 1.875rem;
+      font-weight: 600;
+      line-height: 2.25rem;
+    }
+  }
+}
+
 #intro{
   display: block;
   width: 100%;
@@ -30,37 +59,46 @@ body{
 }
 
 #setting{
-  margin-top: 124px;
   overflow: visible;
+  #wrap{
+    margin-top: 124px;
+    .title{
+      margin-bottom: 50px;
+    }
+  }
   .mySwiper{
-    #wrap{
-      padding-left: 30px;
-      padding-right: 30px;
-      .title{
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        margin-bottom: 50px;
-        // 애니메이션 적용
-        &-sub{
-          font-size: 1.125rem;
-          line-height: 1.375rem;
+    .swiper-slide-active{
+      .title-sub{
+        animation: fade-in 1s forwards;
+        animation-delay: 0.5s;
+      }
+      .title-main{
+        animation: fade-in 1s forwards;
+        animation-delay: 1.5s;
+      }
+      .img, .map{
+        animation: fade-in 1s forwards;
+        animation-delay: 2.5s;
+      }
+      .pin1{
+        animation: pin-animation 1s forwards;
+        animation-delay: 2.7s;
+      }
+      .pin2{
+        animation: pin-animation 1s forwards;
+        animation-delay: 2.9s;
+      }
+      .pin3{
+        animation: pin-animation 1s forwards;
+        animation-delay: 3.1s;
+      }
+    }
+        .title-sub, .title-main {
           opacity: 0;
           transform: translateY(20px);
-          animation: fade-in 1s forwards;
-          animation-delay: 0.5s;
-        }
-        &-main{
-          font-size: 1.875rem;
-          font-weight: 600;
-          line-height: 2.25rem;
-          opacity: 0;
-          transform: translateY(20px);
-          animation: fade-in 1s forwards;
-          animation-delay: 1.5s;
         }
       }
-      .img{
+      .img, .map{
         position: relative;
         display: flex;
         justify-content: center;
@@ -68,16 +106,9 @@ body{
         width: 100%;
         opacity: 0;
         transform: translateY(20px);
-        animation: fade-in 1s forwards;
-        animation-delay: 2.5s;
-
       }
+
       .map{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         .map-img{
           opacity: 0;
           transform: translateY(20px);
@@ -89,33 +120,28 @@ body{
           width: 60px;
           height: 60px;
           opacity: 0;  // 처음에는 보이지 않게 설정
-          animation: pin-animation 1s forwards;
+          transform:scale(0);
         }
         .pin1{
           position: absolute;
           top: 18px;
           right: 14px;
-          animation-delay: 2.7s; 
         }
         .pin2{
           position: absolute;
           top: 58px;
           left: 76px;
-          animation-delay: 2.9s;
         }
         .pin3{
           position: absolute;
           bottom: 70px;
           left: 16px;
-          animation-delay: 3.1s;
         }
-      }
-    }
-    .swiper-pagination{
-      opacity: 0;
-      animation: fade-in 1s forwards;
-      animation-delay: 3.5s;
-    }
+  }
+  .swiper-pagination{
+    opacity: 0;
+    animation: fade-in 1s forwards;
+    animation-delay: 3.5s;
   }
   .skip{
     position: absolute;
@@ -129,6 +155,62 @@ body{
   }
 }
 
+#login{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .btn-component{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 18px;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+}
+
+.first-login{
+  margin-top: 124px;
+  .img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 16px;
+    .walk{
+      opacity: 0;
+      animation: fade-in-left 1s forwards;
+    }
+    .talk{
+      transform: translateY(100%, 50%);
+      opacity: 0;
+      animation: fade-in-right 1s forwards;
+      animation-delay: 1s;
+    }
+    .coffee{
+      opacity: 0;
+      animation: fade-in-left 1s forwards;
+      animation-delay: 2s;
+      margin-top: 30px;
+    }
+  }
+  .btn{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    .btn-component{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+    }
+  }
+}
 
 // 애니메이션 목록
 
@@ -140,6 +222,27 @@ body{
   }
 }
 
+@keyframes fade-in-left{
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right{
+  from{
+    opacity: 0;
+    transform: translate(100%, 50%);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 50%);
+  }
+}
 
 @keyframes pin-animation {
   0% {
@@ -155,3 +258,4 @@ body{
     opacity: 1;  // 완전히 보이게
   }
 }
+
