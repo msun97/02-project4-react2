@@ -20,7 +20,7 @@ const firstLogin = () => {
           <a href='/login'>로그인</a>
         </Button>
         <Button Bg='gray'>          
-          <a href='/signUp'>회원가입</a>
+          <a href='/join'>회원가입</a>
         </Button>
       </div>
     </div>

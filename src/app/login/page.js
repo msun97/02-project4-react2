@@ -1,6 +1,8 @@
 import Button from '@/component/Button'
 import Image from 'next/image'
 import React from 'react'
+import { SiNaver } from "react-icons/si";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 const login = () => {
   return (
@@ -15,8 +17,14 @@ const login = () => {
         </div>  
       </div>
       <div className='sns-login'>
-        <Button Bg='naver'>네이버 아이디로 로그인</Button>
-        <Button Bg='kakao'>카카오 아이디로 로그인</Button>
+        <Button Bg='naver'>
+        <SiNaver size={24} />
+          네이버 아이디로 로그인
+        </Button>
+        <Button Bg='kakao'>
+          <RiKakaoTalkFill size={24} />
+          카카오 아이디로 로그인
+        </Button>
         <div className='join'>
           <a href="/join">회원가입</a>
         </div>

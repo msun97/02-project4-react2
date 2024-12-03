@@ -1,3 +1,5 @@
+
+
 @use 'utils' as utils;
 @use 'variables' as vars;
 @use 'fonts' as fonts;
@@ -161,6 +163,25 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  img{
+    margin-bottom: 30px;
+  }
+  .id-login{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 57px;
+    .primary{
+      justify-content: center;
+      align-items: center;
+    }
+    .find-id{
+      width: 100%;
+      text-align: center;
+      font-size: 0.938rem;
+      line-height: 1.125rem;
+    }
+  }
   .btn-component{
     display: flex;
     justify-content: flex-start;
@@ -168,6 +189,28 @@ body{
     align-items: center;
     font-size: 1.125rem;
     line-height: 1.375rem;
+  }
+  .sns-login{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .btn-component{
+      display: flex;
+      gap:30px;
+    }
+    .naver{
+      background-color: vars.$naver;
+      color: white;
+    }
+    .kakao{
+      background-color: vars.$kakao;
+    }
+    .join{
+      font-size: 0.938rem;
+      line-height: 1.125rem;
+      width: 100%;
+      text-align: center;
+    }
   }
 }
 
@@ -211,6 +254,56 @@ body{
     }
   }
 }
+
+#login{
+  margin-top: 124px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    margin-bottom: 30px;
+  }
+  .id-login{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 57px;
+    .primary{
+      justify-content: center;
+      align-items: center;
+    }
+    .find-id{
+      width: 100%;
+      text-align: center;
+      font-size: 0.938rem;
+      line-height: 1.125rem;
+    }
+  }
+}
+
+#join{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top:54px;
+  .back{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  img{
+    margin-bottom: 19px;
+  }
+}
+
 
 // 애니메이션 목록
 
