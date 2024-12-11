@@ -21,6 +21,10 @@ body{
   .gray{
     background-color: vars.$gray40;
   }
+  .primary60{
+    background-color: vars.$primary60;
+    color:white;
+  }
 
 
 #wrap{
@@ -302,10 +306,454 @@ body{
   img{
     margin-bottom: 19px;
   }
+  .join-wrapper {
+      width: 100%;
+      max-width: 500px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      .cateogry, .informations, .etc-information, .agree {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        .title{
+          h2{
+            font-size: 18px;
+            color: vars.$gray;
+            margin-bottom: 4px;
+          }
+          hr{
+            border: 0;
+            border-top: 1px solid vars.$gray;;
+          }
+        }
+        .select{
+          display: flex;
+          gap:12px;
+          flex-direction: column;
+          div{
+            display: flex;
+            gap:9.85px;
+            input[type="radio"] {
+              appearance: none;
+              width: 24px;
+              height: 24px;
+              background-color: vars.$gray30; /* 배경 유지 */
+              border-radius: 50%;
+              position: relative; /* ::after를 위한 기준 */
+            }
+            
+            input[type="radio"]::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              width: 12px; /* 안쪽 원 크기 */
+              height: 12px;
+              background-color: vars.$primary; /* 선택된 상태 색상 */
+              border-radius: 50%;
+              transition: transform 0.2s ease-in-out;
+            }
+            
+            input[type="radio"]:checked::after {
+              transform: translate(-50%, -50%) scale(1); /* 체크되었을 때 안쪽 원 나타남 */
+            }
+          }
+        }
+        .id, .password, .phone, .email, .nickname, .sex,.birth, .use{
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          h3{
+            font-size: 0.9375rem;
+            font-weight: 600;
+          }
+          input{
+            border: none;
+            border-bottom: 1px vars.$gray40 solid;
+            padding-bottom: 4px;
+            width: 100%;
+            font-size: 0.9375rem;
+            font-weight: normal;
+          }
+          input[type="date"] {
+            color: vars.$gray;
+            font-size: 0.9375rem;
+            font-weight: 400;
+            border: none;
+          }
+          .select{
+            display: flex;
+            gap:12px;
+            flex-direction: row;
+            .sex{
+              input[type="radio"] {
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                background-color: vars.$gray30; /* 배경 유지 */
+                border-radius: 50%;
+                position: relative; /* ::after를 위한 기준 */
+              }
+              
+              input[type="radio"]::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0);
+                width: 12px; /* 안쪽 원 크기 */
+                height: 12px;
+                background-color: vars.$primary; /* 선택된 상태 색상 */
+                border-radius: 50%;
+                transition: transform 0.2s ease-in-out;
+              }
+              
+              input[type="radio"]:checked::after {
+                transform: translate(-50%, -50%) scale(1); /* 체크되었을 때 안쪽 원 나타남 */
+              }
+            }
+          }
+          .use{
+            overflow-y: scroll;
+            background-color: vars.$gray30;
+            height: 132px;
+            padding: 12px;
+          }
+          .checkbox{
+            display: flex;
+            gap: 10px;
+            input[type="checkbox"] {
+              appearance: none;
+              width: 24px;
+              height: 24px;
+              background-color: vars.$gray30; /* 배경 유지 */
+              border-radius: 50%;
+              position: relative; /* ::after를 위한 기준 */
+            }
+            
+            input[type="checkbox"]::after {
+              content: "";
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) scale(0);
+              width: 12px; /* 안쪽 원 크기 */
+              height: 12px;
+              background-color: vars.$primary; /* 선택된 상태 색상 */
+              border-radius: 50%;
+              transition: transform 0.2s ease-in-out;
+            }
+            
+            input[type="checkbox"]:checked::after {
+              transform: translate(-50%, -50%) scale(1); /* 체크되었을 때 안쪽 원 나타남 */
+            }
+          }
+        }
+    }
+    .btn-component{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.125rem;
+      margin-bottom: 142px;
+    }
+  }
+}
+
+// 애니메이션 목록
+
+.final{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding:30px;
+  margin-top: 77px;
+  .title{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 170px;
+    h2{
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 2.25rem;
+    }
+    h3{
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.375rem;
+    }
+  }
+  .question{
+    display: flex;
+    gap: 30px;
+    .icon{
+      width: 95px;
+      height: 95px;
+      background-image: url('/images/logo-icon.png');
+      background-size:auto ;
+    }
+    &-title{
+      width: 205px;
+      font-size: 1.5rem;
+      line-height: 1.8rem;
+      font-weight: 600;
+    }
+  }
+  .answer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    .btn-component{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .next{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    a{
+      display: block;
+    }
+  }
+  .progress{
+    width: 100%;
+    position: relative;
+    .bg-bar{
+      width: 100%;
+      height: 20px;
+      background-color: vars.$gray30;
+      border-radius: 20px;
+    }
+    .fill-bar{
+      width: 0%;
+      height: 20px;
+      background-color: vars.$primary40;
+      position: absolute;
+      top: 0;
+      border-radius: 20px;
+    }
+  }
+}
+
+.final2{
+  .back{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding: 30px;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  &-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  padding:30px;
+  margin-top: 0px;
+
+  .title{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 172px;
+    h3{
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 2.25rem;
+    }
+    h2{
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.375rem;
+    }
+  }
+  .question{
+    display: flex;
+    flex-direction: column;
+    gap: 63px;
+    .question-name, .question-age{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .question-title{
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.8rem;
+      }
+      .answer{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        h3{
+          font-size: 1.125rem;
+          line-height: 1.35rem;
+        }
+        input{
+          border: none;
+          border-bottom: 1px vars.$gray40 solid;
+          padding-bottom: 4px;
+          width: 100%;
+          font-size: 0.9375rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .next{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    a{
+      display: block;
+    }
+  }
+  .progress{
+    width: 100%;
+    position: relative;
+    margin-top: -12px;
+    .bg-bar{
+      width: 100%;
+      height: 20px;
+      background-color: vars.$gray30;
+      border-radius: 20px;
+    }
+    .fill-bar{
+      width: 50%;
+      height: 20px;
+      background-color: vars.$primary40;
+      position: absolute;
+      top: 0;
+      border-radius: 20px;
+    }
+  }
+  }
+}
+
+.final3{
+  .back{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding: 30px;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    .title{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      h3{
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 2.25rem;
+      }
+      h2{
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 1.375rem;
+      }
+    }
+    .fig{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 85px;
+      .profile-fig{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color:vars.$gray40;
+      }
+      .profile-description{
+        margin-top: 22px;
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+      .filebox{
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 42px;
+        .btn-component{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           gap: 8px;
+           font-size: 1.125rem;
+           line-height: 1.375rem;
+         }
+        input{
+          display: none;
+        }
+      }
+    }
+    .next{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      gap: 8px;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      margin-top: 58px;
+      a{
+        display: block;
+      }
+    }
+    .progress{
+      width: 100%;
+      position: relative;
+      margin-top: 68px;
+      .bg-bar{
+        width: 100%;
+        height: 20px;
+        background-color: vars.$gray30;
+        border-radius: 20px;
+      }
+      .fill-bar{
+        width: 75%;
+        height: 20px;
+        background-color: vars.$primary40;
+        position: absolute;
+        top: 0;
+        border-radius: 20px;
+      }
+    }
+  }
 }
 
 
-// 애니메이션 목록
 
 
 @keyframes fade-in {
@@ -351,4 +799,3 @@ body{
     opacity: 1;  // 완전히 보이게
   }
 }
-
