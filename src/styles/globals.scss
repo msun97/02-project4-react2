@@ -10,7 +10,7 @@
 
 body{
   font-family: p-400;
-  color: vars.$gray;
+  color: vars.$gray60;
   letter-spacing: -2%;
 }
 
@@ -320,12 +320,12 @@ body{
         .title{
           h2{
             font-size: 18px;
-            color: vars.$gray;
+            color: vars.$gray60;
             margin-bottom: 4px;
           }
           hr{
             border: 0;
-            border-top: 1px solid vars.$gray;;
+            border-top: 1px solid vars.$gray60;
           }
         }
         .select{
@@ -379,7 +379,7 @@ body{
             font-weight: normal;
           }
           input[type="date"] {
-            color: vars.$gray;
+            color: vars.$gray60;
             font-size: 0.9375rem;
             font-weight: 400;
             border: none;
@@ -753,6 +753,80 @@ body{
   }
 }
 
+.final4{
+  .back{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    padding: 30px;
+    width: 100%;
+    gap: 8px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+  }
+  &-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 55px;
+    padding:30px;
+    margin-top: 35px;
+    .title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    h2{
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 2.25rem;
+    }
+    h3{
+      font-size: 1.125rem;
+      font-weight: 500;
+      line-height: 1.375rem;
+    }
+    }
+    .fig{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 22px;
+      .profile-fig{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color:vars.$gray40;
+      }
+      .profile-description{
+        font-size: 1.125rem;
+        line-height: 1.375rem;
+      }
+    }
+    .progress{
+      width: 100%;
+      position: relative;
+      margin-top: 68px;
+      .bg-bar{
+        width: 100%;
+        height: 20px;
+        background-color: vars.$gray30;
+        border-radius: 20px;
+      }
+      .fill-bar{
+        width: 100%;
+        height: 20px;
+        background-color: vars.$primary40;
+        position: absolute;
+        top: 0;
+        border-radius: 20px;
+      }
+    }
+  }
+}
 
 
 
@@ -797,5 +871,402 @@ body{
   100% {
     transform: scale(1);  // 원래 크기 그대로
     opacity: 1;  // 완전히 보이게
+  }
+}
+
+.home{
+  .home{
+    color: vars.$primary !important;
+  }
+}
+
+.wrapper{
+  background-color: vars.$gray20;
+  height: 100vh;
+  header{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    width: 100%;
+    background-color: #fff;
+    height: 160px;
+    box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.05);
+    .logo{
+      display: flex;
+      align-items: flex-end;
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 2.25rem;
+      color: vars.$primary;
+    }
+    .utils{
+      display: flex;
+      align-items: flex-end;
+      a{
+        .setting-name{
+          display: none;
+        }
+        svg{
+          width: 35px;
+          height: 35px;
+          fill: vars.$gray
+        }
+      }
+    }
+  }
+  main{
+    margin-top: 30px;
+    .profile{
+      display: flex;
+      align-items: center;
+      height: 138px;
+      .line{
+        width: 18px;
+        height: 100%;
+        background-color: vars.$primary;
+        border-radius: 20px 0px 0px 20px;
+      }
+      .profile-image{
+        margin-left: 30px;
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background-color:vars.$gray40;
+      }
+      .profile-info{
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        h2{
+          font-size: 1.75rem;
+          font-weight: 600;
+          line-height: 2.1rem;
+        }
+        .todolist{
+          font-size: 1.125rem;
+          line-height: 1.375rem;
+          font-weight: 500;
+        }
+      }
+    }
+    .weather{
+      margin-top: 15px;
+      &-swiper{
+        padding: 30px;
+        .swiper-slide{
+          overflow: visible;
+          .weather-icon{
+            svg{
+              width: 100px;
+              height: 100px;
+              fill: vars.$gray20;
+            }
+          }
+        }
+      }
+      &-title{
+        margin-bottom: 20px;
+        h2{
+          font-size: 1.875rem;
+          font-weight: 700;
+          line-height: 2.25rem;
+        }
+        h3{
+          margin-top: 8px;
+          font-size: 0.938rem;
+          font-weight: 500;
+          line-height: 1.125rem;
+        }
+      }
+      &-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 290px;
+        height: 187px;
+        border-radius: 10px;
+        background-color: vars.$primary40;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        .weather-info{
+          text-align: center;
+          h3{
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 2.25rem;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    box-shadow: 0px -1px 20px 0px rgba(0, 0, 0, 0.05);
+    ul{
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 27px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 30px;
+      li{
+        width: 40px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        color: vars.$gray;
+        > a{
+          display: flex;
+          gap: 5px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          font-size: 0.9375rem;
+          line-height: 1.125rem;
+          svg{
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.newletter{
+  height: 100%;
+  main{
+    height: 100%;
+    padding: 0px 30px;
+    padding-bottom: 170px;
+    .news-list, .chat-list{
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+}
+
+.chat{
+  height: 100%;
+  main{
+    margin-top:0;
+    height: 100%;
+    padding-bottom: 170px;
+    .chat-list-header{
+      .chat-list-nav{
+        ul{
+          display: flex;
+          width: 100%;
+          height: 60px;
+          background-color: vars.$gray20;
+          li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 25%;
+            height: 100%;
+          }
+          .active{
+            background-color: vars.$gray30;
+          }
+        }
+      }
+    }
+    .chat-list-filter{
+      padding: 18px 30px;
+      display: flex;
+      align-items: center;
+      gap:5px;
+      justify-content: flex-end
+    }
+    .chat-list{
+      padding: 0px 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .new{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: calc(100vh - 200px);
+        right: 30px;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        background-color: vars.$primary;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        svg{
+          width: 30px;
+          height: 30px;
+          color: vars.$gray20;
+        }
+      }
+    }
+  }
+}
+
+.map{
+  position: relative;
+  .btn-component{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 45px;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+  .map{
+    color: vars.$primary;
+  }
+}
+
+.newletter{
+  .news{
+    color: vars.$primary !important;
+  }
+}
+
+.chat{
+  .chat{
+    color: vars.$primary !important;
+  }
+}
+
+
+.homeset{
+  height: auto;
+  main{
+    .profile {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      height: auto;
+      .img{
+        position: relative;
+        .img-profile{
+          width: 124px;
+          height: 124px;
+          border-radius: 50%;
+          background-color: vars.$gray;
+        }
+        .upload{
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: vars.$primary;
+          position: absolute;
+          right: -8px;
+          bottom: -8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg{
+            width: 30px;
+            height: 30px;
+            color: vars.$gray20;
+          }
+        }
+        
+      }
+      .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        h2{
+          font-size: 1.875rem;
+          font-weight: 700;
+          line-height: 2.25rem;
+        }
+      }
+      .follow{
+        display: flex;
+        gap: 10px;
+        color: vars.$gray;
+      }
+    }
+    .setting-menu{
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 30px;
+      font-size: 1.2rem;
+      line-height: 1.44rem;
+      margin-bottom: 170px;
+      ul{
+        border-bottom: vars.$gray40 solid 1px;
+        li{
+          padding: 0px 30px;
+          background-color: #fff;
+          height: 62px;
+          display: flex;
+          align-items: center;
+          border-top: vars.$gray40 solid 1px;
+        }
+      }
+    }
+  }
+}
+
+
+.chatwrite{
+  main{
+    padding: 0px 30px;
+    .chat-write{
+      .category{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
+      }
+      .title{
+        width: 100%;
+        height: 36px;
+        border-radius: 10px;
+        padding: 7px 15px;
+        overflow-x: scroll;
+        font-size: 0.9378rem;
+        margin-bottom: 12px;
+      }
+      .content{
+        width: 100%; border-radius: 10px;
+        height: 359px;
+        padding: 7px 15px;
+      }
+      .upload{
+        display: flex;
+        gap: 8px;
+        .btn-component{
+          margin-top: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  .active{
+    color: vars.$primary !important;
   }
 }

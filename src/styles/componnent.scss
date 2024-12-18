@@ -1,5 +1,57 @@
+@use 'variables' as vars;
+
 .btn-component{
   width: 309px;
   height: 52px;
   border-radius: 20px;
+}
+
+.newList{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .news-item{
+    display: flex;
+    gap: 30px;
+    .news-item-img{
+      width: 135px;
+      height: 117px;
+      background-color: #fff;
+    }
+    .news-item-txt{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 165px;
+      height: 117px;
+      text-overflow: ellipsis;
+      .news-item-title{
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 2.25rem;
+        color : vars.$gray60;
+      }
+      .news-item-content{
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        color : vars.$gray60;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+  .news-item-sub{
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: vars.$gray;
+    display: flex;
+    justify-content: space-between
+  }
+}
+
+.news-item-group{
+  display: flex;
+  gap: 16px;
 }
